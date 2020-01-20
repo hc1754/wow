@@ -5,8 +5,21 @@
 
     
 
-<mapper namespace="co.kr.test05.member.memberMapper">
+<mapper namespace="kr.co.test05.member.memberMapper">
 
+ 	<insert id="insertMember" parameterType="kr.co.test05.member.vo.MemberVO">
+		INSERT INTO member(
+            mem_email,
+            mem_pass,
+            mem_authId,
+            mem_hp
+        )VALUES(
+            #{mem_email},
+            #{mem_pass},
+            #{mem_authId},
+            #{mem_hp}
+        )
+	</insert>
 
 
 </mapper>
